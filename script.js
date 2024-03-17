@@ -9,6 +9,7 @@ let charContent = "";
 let password = "";
 
 function check(x) {
+  charContent = ''
   if (x.innerText == "radio_button_unchecked") {
     x.innerText = "check_circle";
     x.style.color = "lightgreen";
