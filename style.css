@@ -1,0 +1,243 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://images.unsplash.com/photo-1514064019862-23e2a332a6a6?q=80&w=1914&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-position: center;
+  background-size: cover;
+}
+
+#bgshade {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.237);
+}
+
+#main {
+  position: relative;
+  width: 23rem;
+  padding: 1rem;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.014);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(12.5px);
+  -webkit-backdrop-filter: blur(12.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  overflow: hidden;
+}
+
+#generate {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  flex-direction: column;
+}
+
+#inputfield {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  border-radius: 5px;
+}
+
+input {
+  height: 100%;
+  width: 100%;
+  padding: 0 0.6rem;
+  font-size: 1rem;
+  background-color: transparent;
+  color: white;
+  letter-spacing: 1px;
+  border: none;
+  outline: none;
+}
+
+input::placeholder {
+  color: rgb(224, 224, 224);
+}
+
+#inputfield span {
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  font-size: 1.4rem;
+  border-left: 1px solid white;
+  color: white;
+  cursor: pointer;
+}
+
+#passwordLengthSection {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#passwordLengthSection > p {
+  font-size: 1rem;
+}
+#passwordLengthSection > :in-range {
+  width: 40%;
+  cursor: pointer;
+  height: 6px;
+}
+
+#passDisplay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 0.7rem;
+  width: 2.5rem;
+  border-radius: 5px;
+  background-image: linear-gradient(
+    to top,
+    #1e3c72 0%,
+    #1e3c72 1%,
+    #2a5298 100%
+  );
+}
+
+#selectionField {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.CharSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid gray;
+  padding: 1rem 0;
+}
+
+.CharSection > p {
+  text-wrap: nowrap;
+}
+
+#generateField {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+button {
+  width: 100%;
+  font-weight: 700;
+  height: 2.8rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  cursor: pointer;
+}
+
+#generateField > span {
+  width: 20%;
+  background-image: linear-gradient(
+    to top,
+    #1e3c72 0%,
+    #1e3c72 1%,
+    #2a5298 100%
+  );
+  height: 2.8rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* For History Section */
+
+#historyPage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -100%;
+  left: 0;
+  transition: 0.3s linear;
+  overflow-y: scroll;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(16.5px);
+  -webkit-backdrop-filter: blur(16.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+#historyHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid grey;
+  padding: 0.2rem 0;
+  position: sticky;
+  top: 0;
+  padding: 1rem;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+}
+
+#historyPageClose {
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+ul > li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.3rem;
+}
+
+ul li div {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.passwordDelete {
+  padding: 0.5rem;
+  background-color: #f7fffb;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+}
