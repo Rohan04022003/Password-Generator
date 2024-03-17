@@ -143,6 +143,10 @@ input::placeholder {
   text-wrap: nowrap;
 }
 
+.material-symbols-outlined{
+  cursor:pointer;
+}
+
 #generateField {
   width: 100%;
   display: flex;
