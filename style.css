@@ -130,6 +130,10 @@ input::placeholder {
   flex-direction: column;
 }
 
+.cp{
+    cursor: pointer;
+}
+
 .CharSection {
   display: flex;
   justify-content: space-between;
@@ -141,10 +145,6 @@ input::placeholder {
 
 .CharSection > p {
   text-wrap: nowrap;
-}
-
-.material-symbols-outlined{
-  cursor:pointer;
 }
 
 #generateField {
